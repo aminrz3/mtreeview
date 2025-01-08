@@ -130,7 +130,7 @@ You can use the `nodeBuilder` to define custom widgets for each node:
 The `onReorder` method allows custom logic for handling node reordering. This is managed internally by the `MTreeview` widget.
 
 ## Contributions
-Contributions are welcome! Feel free to open issues or submit pull requests on the ![GitHub repository]()
+Contributions are welcome! Feel free to open issues or submit pull requests on the [GitHub repository](https://github.com/aminrz3/mtreeview)
 
 ## License
 This library is licensed under the MIT License. See the LICENSE file for details.
