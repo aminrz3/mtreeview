@@ -1,5 +1,5 @@
 # Momentum Tree View
-The MTreeview widget provides an interactive, hierarchical, and draggable tree structure for Flutter applications. This widget is highly customizable and supports reordering and nesting of tree nodes with smooth animations.
+The `MTreeview` widget provides an interactive, hierarchical, and draggable tree structure for Flutter applications. This widget is highly customizable and supports reordering and nesting of tree nodes with smooth animations.
 The widget is based on the Flutter’s familiar APIs of [ReorderListView](https://api.flutter.dev/flutter/material/ReorderableListView-class.html) and [Draggable](https://api.flutter.dev/flutter/widgets/Draggable-class.html). All the mobile, web and desktop platforms are fully supported.
 ![Momentum Tree View Demo](https://media.giphy.com/media/y3zFTCr4PI4oJUWuF2/giphy.gif)
 
