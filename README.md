@@ -16,57 +16,58 @@ The widget is based on the Flutter’s familiar APIs of [ReorderListView](https:
 
 Add the following to your pubspec.yaml:
 ```yaml
-    dependencies:
-      mtreeview: latest_version
+dependencies:
+   mtreeview: latest_version
 ```
 Then, run:
 ```yaml
-    flutter pub get
+flutter pub get
 ```
 
 ## Usage
 
 ### Import the Library
 ```dart
-    import 'package:mtreeview/treeview.dart';
+import 'package:mtreeview/treeview.dart';
 ```
 
 ### Basic Example
 ```dart
-    import 'package:flutter/material.dart';
-    import 'package:mtreeview/treeview.dart';
-    import 'package:mtreeview/model/tree_node.dart';
-    
-    void main() => runApp(MyApp());
-    
-    class MyApp extends StatelessWidget {
-      @override
-      Widget build(BuildContext context) {
-        return MaterialApp(
-          home: Scaffold(
-            appBar: AppBar(title: Text('Treeview Example')),
-            body: Treeview(
-              treeNodes: _buildTreeNodes(),
-              nodeBuilder: (node) => ListTile(
+import 'package:flutter/material.dart';
+import 'package:mtreeview/treeview.dart';
+import 'package:mtreeview/model/tree_node.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Treeview Example')),
+        body: Treeview(
+          treeNodes: _buildTreeNodes(),
+          nodeBuilder: (node) =>
+              ListTile(
                 title: Text(node.label),
               ),
-            ),
-          ),
-        );
-      }
-    
-      List<TreeNode> _buildTreeNodes() {
-        return [
-          TreeNode(isRoot: true, label: 'Root 1', children: [
-            TreeNode(label: 'Child 1'),
-            TreeNode(label: 'Child 2'),
-          ]),
-          TreeNode(isRoot: true, label: 'Root 2', children: [
-            TreeNode(label: 'Child 3'),
-          ]),
-        ];
-      }
-    }
+        ),
+      ),
+    );
+  }
+
+  List<TreeNode> _buildTreeNodes() {
+    return [
+      TreeNode(isRoot: true, label: 'Root 1', children: [
+        TreeNode(label: 'Child 1'),
+        TreeNode(label: 'Child 2'),
+      ]),
+      TreeNode(isRoot: true, label: 'Root 2', children: [
+        TreeNode(label: 'Child 3'),
+      ]),
+    ];
+  }
+}
 ```
 
 ## Customizing the Widget
@@ -100,14 +101,15 @@ The `TreeNode` class represents individual nodes in the tree structure:
 
 ### Example:
 ```dart
-    TreeNode node = TreeNode(
-      isRoot:true,
-      label: 'Parent',
-      children: [
-        TreeNode(label: 'Child 1'),
-        TreeNode(label: 'Child 2'),
-      ],
-    );
+
+TreeNode node = TreeNode(
+  isRoot: true,
+  label: 'Parent',
+  children: [
+    TreeNode(label: 'Child 1'),
+    TreeNode(label: 'Child 2'),
+  ],
+);
 ```
 
 ## Advanced Usage:
