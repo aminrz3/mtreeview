@@ -14,6 +14,7 @@ class Treeview extends StatefulWidget {
   final double paddingNode;
   final double dragOpacity;
   final bool showNodeConnectionLine;
+  final double heightNodeConnectionLine;
   final double paddingLeftNodeConnectionLine;
   final double paddingTopNodeConnectionLine;
   final Color colorNodeConnectionLine;
@@ -30,6 +31,7 @@ class Treeview extends StatefulWidget {
     this.showNodeConnectionLine = false,
     this.paddingLeftNodeConnectionLine = 13.0,
     this.paddingTopNodeConnectionLine = 50.0,
+    this.heightNodeConnectionLine = 50.0,
     this.colorNodeConnectionLine = const Color(0xFFE4E4E7),
     this.showDragIndicator = true,
     this.colorDragIndicator = Colors.blue,
@@ -136,12 +138,11 @@ class _TreeviewState extends State<Treeview> {
           children: [
             _buildReorderWidget(child, node.children.indexOf(child), depth + 1),
             if (!child.isRoot && child.children.isNotEmpty && widget.showNodeConnectionLine)
-              Positioned(
-                left: widget.paddingLeftNodeConnectionLine,
-                top: widget.paddingTopNodeConnectionLine,
-                bottom: 0,
+              Padding(
+                padding: EdgeInsets.only(top: widget.paddingTopNodeConnectionLine, left: widget.paddingLeftNodeConnectionLine),
                 child: Container(
                   width: 1,
+                  height: widget.heightNodeConnectionLine,
                   color: widget.colorNodeConnectionLine,
                 ),
               ),

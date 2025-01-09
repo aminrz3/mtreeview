@@ -77,19 +77,20 @@ class MyApp extends StatelessWidget {
 The `MTreeview` widget provides several customization options via its constructor:
 
 ### Constructor Parameters
-| Parameter                         | Description                                                   | Default Value       |
-|-----------------------------------|---------------------------------------------------------------|---------------------|
-| treeNodes                         | A list of TreeNode objects representing the tree structure.   | Required            |
-| nodeBuilder                       | A function to build custom widgets for each tree node.        | Required            |
-| dragWidth                         | Width of the node being dragged.                              | 300                 |
-| paddingNode                       | Left padding for child nodes.                                 | 38                  |
-| dragOpacity                       | Opacity of the node while being dragged.                      | 0.9                 |
-| showNodeConnectionLine            | Whether to show lines connecting parent and child nodes.      | false               |
-| paddingLeftNodeConnectionLine     | Horizontal padding for the connection lines.                  | 13.0                |
-| paddingTopNodeConnectionLine      | Vertical padding for the connection lines.                    | 50.0                |
-| colorNodeConnectionLine           | Color of the connection lines.                                | Color(0xFFE4E4E7)   |
-| showDragIndicator                 | Whether to show a drag indicator when dragging a node.        | true                |
-| colorDragIndicator                | Color of the drag indicator.                                  | Colors.blue         |
+| Parameter                     | Description                                                 | Default Value       |
+|-------------------------------|-------------------------------------------------------------|---------------------|
+| treeNodes                     | A list of TreeNode objects representing the tree structure. | Required            |
+| nodeBuilder                   | A function to build custom widgets for each tree node.      | Required            |
+| dragWidth                     | Width of the node being dragged.                            | 300                 |
+| paddingNode                   | Left padding for child nodes.                               | 38                  |
+| dragOpacity                   | Opacity of the node while being dragged.                    | 0.9                 |
+| showNodeConnectionLine        | Whether to show lines connecting parent and child nodes.    | false               |
+| paddingLeftNodeConnectionLine | Horizontal padding for the connection lines.                | 13.0                |
+| paddingTopNodeConnectionLine  | Vertical padding for the connection lines.                  | 50.0                |
+| heightNodeConnectionLine      | Height for the connection lines.                            | 50.0                |
+| colorNodeConnectionLine       | Color of the connection lines.                              | Color(0xFFE4E4E7)   |
+| showDragIndicator             | Whether to show a drag indicator when dragging a node.      | true                |
+| colorDragIndicator            | Color of the drag indicator.                                | Colors.blue         |
 
 ## TreeNode Model
 The `TreeNode` class represents individual nodes in the tree structure:

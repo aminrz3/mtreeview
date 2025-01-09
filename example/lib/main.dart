@@ -31,29 +31,18 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late double screenWidth;
-  final List<TreeNode> _treeNodes = [
-    TreeNode(
-      isRoot: true,
-      title: "Parent 1",
-      children: [
-        TreeNode(title: "Child 1.1"),
-        TreeNode(title: "Child 1.2"),
-        TreeNode(title: "Child 1.3"),
-      ],
-    ),
-    TreeNode(
-      isRoot: true,
-      title: "Parent 2",
-      children: [
-        TreeNode(title: "Child 2.1"),
-        TreeNode(title: "Child 2.2"),
-      ],
-    ),
-    TreeNode(
-      isRoot: true,
-      title: "Parent 3",
-    ),
-  ];
+  final List<TreeNode> _treeNodes = [];
+
+  @override
+  void initState() {
+    for(int i=0; i<100; i++){
+      _treeNodes.add(TreeNode(title: "Parent $i", isRoot: true));
+      for(int j=0; j<5; j++){
+        _treeNodes[i].children.add(TreeNode(title: "Child $i.$j"));
+      }
+    }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
